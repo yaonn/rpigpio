@@ -1,5 +1,6 @@
 from flask import Flask, jsonify
 from RPi import GPIO
+from threading import Timer
 
 app = Flask(__name__)
 
@@ -22,6 +23,6 @@ def door_on():
 
 if __name__ == '__main__':
     try:
-      app.run(debug=False, host='0.0.0.0')
+        app.run(debug=False, host='0.0.0.0')
     except Exception as e:
-      print(f'main: {e}')
+        print(f'main: {e}')
